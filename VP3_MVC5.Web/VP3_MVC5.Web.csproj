@@ -102,6 +102,42 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\bgt.png" />
+    <Content Include="Content\images\blank.gif" />
+    <Content Include="Content\images\call2action_bkgd.png" />
+    <Content Include="Content\images\call2action_Shadow.png" />
+    <Content Include="Content\images\call2action_signup.png" />
+    <Content Include="Content\images\camera-loader.gif" />
+    <Content Include="Content\images\camera_skins.png" />
+    <Content Include="Content\images\columns_video1.png" />
+    <Content Include="Content\images\columns_video2.png" />
+    <Content Include="Content\images\fancybox_loading.gif" />
+    <Content Include="Content\images\fancybox_overlay.png" />
+    <Content Include="Content\images\fancybox_sprite.png" />
+    <Content Include="Content\images\footer_bkgd.png" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\home_video_1_thumbnail.png" />
+    <Content Include="Content\images\home_video_2_thumbnail.png" />
+    <Content Include="Content\images\icodate.png" />
+    <Content Include="Content\images\icologin.png" />
+    <Content Include="Content\images\icouser.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo_abbott.png" />
+    <Content Include="Content\images\logo_broad_institute.png" />
+    <Content Include="Content\images\logo_harvard.png" />
+    <Content Include="Content\images\logo_hr.png" />
+    <Content Include="Content\images\logo_noaa.png" />
+    <Content Include="Content\images\logo_sabre.png" />
+    <Content Include="Content\images\logo_salesforce.png" />
+    <Content Include="Content\images\slideshow_image1.png" />
+    <Content Include="Content\images\slideshow_image2.png" />
+    <Content Include="Content\images\slideshow_image3.png" />
+    <Content Include="Content\images\slideshow_image4.png" />
+    <Content Include="Content\images\slideshow_image5.png" />
+    <Content Include="Content\images\social_icon_fb.png" />
+    <Content Include="Content\images\social_Icon_twitter.png" />
+    <Content Include="Content\images\topper_bkgd.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -168,6 +204,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,6 +215,8 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
@@ -203,7 +241,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>10840</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:3483/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

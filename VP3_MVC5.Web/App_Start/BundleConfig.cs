@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace VP3_MVC5.Web.App_Start
+namespace VP3_MVC5.Web
 {
     public class BundleConfig
     {
