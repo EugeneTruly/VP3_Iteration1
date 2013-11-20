@@ -1,17 +1,27 @@
 body {
-  font: 100% 'Droid Sans', Lato, Futura, Arial;
+  font: 100% "Droid Sans", Lato, Futura, Arial;
   background-color: #ffffff;
 }
-body#main-menu,
-bodydiv,
-bodyp,
-bodyspan {
-  font-family: 'Droid Sans';
+body .container {
+  padding: 0;
+}
+body .navbar-default {
+  border: none;
+  background: inherit;
+}
+header .navbar-collapse {
+  padding: 0;
 }
 header #top-bar {
   background: url('images/topper_bkgd.png');
   height: 26px;
   box-sizing: border-box;
+  padding: 0;
+}
+header #top-bar .row {
+  margin: 0;
+}
+header #top-bar .col-md-12 {
   padding: 0;
 }
 header #top-bar #top-bar-links {
@@ -31,15 +41,8 @@ header #logo {
   height: 39px;
   background-image: url("images/logo.png");
 }
-header .btn-mobile-menu {
-  font-size: 14px;
-  display: none;
-  float: right;
-  margin-top: 30px;
-}
 header #main-menu {
   margin: 10px 0 20px;
-  float: right;
 }
 header #main-menu li {
   padding: 20px 0;
@@ -52,7 +55,7 @@ header #main-menu li > a {
   text-decoration: none;
   padding: 0 20px;
   color: #193c89;
-  font-size: 16px;
+  font-size: 14px;
 }
 header #main-menu li:not(:last-child) > a {
   border-right: 1px solid gray;

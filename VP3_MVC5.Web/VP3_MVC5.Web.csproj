@@ -101,6 +101,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\bgt.png" />
     <Content Include="Content\images\blank.gif" />
@@ -138,6 +139,7 @@
     <Content Include="Content\images\social_icon_fb.png" />
     <Content Include="Content\images\social_Icon_twitter.png" />
     <Content Include="Content\images\topper_bkgd.png" />
+    <Content Include="Content\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

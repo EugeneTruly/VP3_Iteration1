@@ -2,21 +2,26 @@
 @light_blue: #00c0e3;
 
 // Default font stack
-@font_stack: 'Droid Sans', Lato, Futura, Arial;
+@font-family-base:  "Droid Sans", Lato, Futura, Arial;
 
-//Page level defaults
+// Page level defaults
 body {
-    font: 100% @font_stack;
+    font: 100% @font-family-base;
 	background-color: #ffffff;
-	&#main-menu, &div, &p, &span {
-		font-family: 'Droid Sans';
-	}
+    .container { padding: 0; }
+    .navbar-default {
+      border: none;
+      background: inherit;
+    }
 }
 
 //Header - Top Bar, Menu, Logo
 header {
-	
+
+    .navbar-collapse { padding: 0; }
 	#top-bar {
+        .row { margin: 0; }
+        .col-md-12 { padding: 0; }
 		#top-bar-links {
 			text-align:right;
 			&, a { color:white; font-size:12px; line-height:25px; }
@@ -35,17 +40,10 @@ header {
 		height:39px;
 		background-image:url("images/logo.png");
 	}
-	.btn-mobile-menu {
-		font-size:14px;
-		display:none;
-		float:right;
-		margin-top:30px;
-	}
-	#main-menu 
+	#main-menu
 	{
 		margin:10px 0 20px;
-		float:right;
-		
+
 		//Menu Items
 		li { 
 			padding:20px 0;
@@ -57,7 +55,7 @@ header {
 				text-decoration:none;
 				padding:0 20px;
 				color:@dark_blue;
-				font-size:16px;
+				font-size:14px;
 			}
 			
 			&:not(:last-child) > a {

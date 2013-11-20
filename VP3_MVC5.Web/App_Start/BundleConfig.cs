@@ -24,13 +24,15 @@ namespace VP3_MVC5.Web
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                 "~/Scripts/bootstrap.js"));
             
-            bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css"));
+            bundles.Add(new StyleBundle("~/Content/bootstrap")
+                .Include("~/Content/bootstrap.css"));
             
-            bundles.Add(new StyleBundle("~/Content/bootstrap-theme").Include("~/Content/bootstrap-theme.css"));
+            bundles.Add(new StyleBundle("~/Content/bootstrap-theme")
+                .Include("~/Content/bootstrap-theme.css"));
 
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/site.less"));
+            bundles.Add(new StyleBundle("~/Content/css")
+                .Include("~/Content/site.css"));
         }
     }
 }

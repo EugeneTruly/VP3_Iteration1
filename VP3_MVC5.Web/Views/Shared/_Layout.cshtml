@@ -9,31 +9,48 @@
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"
         type="text/css" />
 
-    @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Viewpath", "Index", "Home", null, new { @class = "navbar-brand" })
+    <header>
+        <div id="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="top-bar-links">
+                            <a href="https://members.viewpath.com/User/Login.aspx">Login</a> | <a href="https://members.viewpath.com/SignupIQ/Signup.aspx">Signup</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+        </div><!-- End #top-bar -->
+
+        <div class="navbar navbar-default" role="navigation" id="top-menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink(" ", "Index", "Home", null, new { @class = "logo", @id = "logo" })
+                </div>
+                <div class="collapse navbar-collapse navbar-collapse-1">
+                    <ul class="nav navbar-nav pull-right" id="main-menu1">
+                        <li>@Html.ActionLink("Home", "Index", "")</li>
+                        <li>@Html.ActionLink("Product", "Product", "Home")</li>
+                        <li>@Html.ActionLink("Community", "Community", "Home")</li>
+                        <li>@Html.ActionLink("Support", "Support", "Home")</li>
+                        <li>@Html.ActionLink("Company", "Company", "Home")</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </div>
+        </div><!-- End #top-menu -->
+
+    </header>
     <div class="container body-content">
         @RenderBody()
         <hr />
