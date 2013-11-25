@@ -33,6 +33,8 @@ namespace VP3_MVC5.Web
 
             bundles.Add(new StyleBundle("~/Content/css")
                 .Include("~/Content/site.css"));
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }
