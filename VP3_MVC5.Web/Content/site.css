@@ -1,9 +1,6 @@
-body {
+﻿body {
   font: 100% "Droid Sans", Lato, Futura, Arial;
   background-color: #ffffff;
-}
-body .container {
-  padding: 0;
 }
 body .navbar-default {
   border: none;
@@ -11,6 +8,10 @@ body .navbar-default {
 }
 header .navbar-collapse {
   padding: 0;
+  margin: 0;
+}
+header .navbar {
+  margin: 0;
 }
 header #top-bar {
   background: url('images/topper_bkgd.png');
@@ -80,13 +81,13 @@ header #main-menu li:not(:last-child) > a {
   box-sizing: border-box;
 }
 #call-to-action > div {
-  padding: 10px 10px 0;
+  padding: 5px 10px 0;
 }
 #call-to-action #call-to-action-header {
   float: left;
   color: #42bd00;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 36px;
   line-height: 1.5em;
   box-sizing: border-box;
   height: 100%;
@@ -94,13 +95,18 @@ header #main-menu li:not(:last-child) > a {
 #call-to-action #call-to-action-button {
   font-size: 11px;
   float: right;
+  text-align: center;
+  padding-top: 10px;
 }
 #call-to-action #call-to-action-button .btn-signup {
+  font-size: 15px;
   display: block;
-  box-sizing: border-box;
+  /*box-sizing:border-box;*/
+
   color: white;
 }
 #call-to-action #call-to-action-text {
+  padding-top: 15px;
   font-weight: normal;
   font-size: 12px;
 }
@@ -109,50 +115,48 @@ header #main-menu li:not(:last-child) > a {
   top: -2px;
 }
 #subheader {
-  font-weight: normal;
+  font: 100% "Droid Sans", Lato, Futura, Arial;
+  font-weight: bold;
   margin: 0 0 30px;
   color: #505050;
-  font-size: 27px;
+  font-size: 22px;
   text-align: center;
   clear: both;
 }
-#video-text {
-  font-size: 12px;
+#video1 {
+  background: url("images/columns_video1.png");
+  width: 280px;
+  height: 199px;
 }
-#video-text #video-text-header {
-  font-weight: bold;
-}
-.video .video-header {
-  font-size: 1.2em;
+#video1-header {
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   padding: 3px;
-  border: solid 1px #9d9fa2;
-  border-bottom-width: 0;
-  background: #fdfdfd;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #fdfdfd 5%, #e0e1e2 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fdfdfd), color-stop(100%, #e0e1e2));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #fdfdfd 5%, #e0e1e2 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #fdfdfd 5%, #e0e1e2 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #fdfdfd 5%, #e0e1e2 100%);
-  /* IE10+ */
-
-  background: linear-gradient(to bottom, #fdfdfd 5%, #e0e1e2 100%);
-  /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#e0e1e2', GradientType=0);
-  /* IE6-9 */
-
+  color: #1ea1de;
+}
+@media (min-width: 780px) {
+  .pull-right-md {
+    float: right;
+  }
+}
+#video2 {
+  background: url("images/columns_video2.png");
+  width: 280px;
+  height: 199px;
+}
+#video2-header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+  color: #010101;
+}
+#video-text {
+  font-size: 14px;
+}
+#video-text #video-text-header {
+  font-weight: bold;
 }
 .video .video-footer {
   color: white;
@@ -160,32 +164,6 @@ header #main-menu li:not(:last-child) > a {
   padding: 2px;
   font-size: 1.1em;
   font-weight: bold;
-  border: solid 1px #9d9fa2;
-  border-top-width: 0;
-  background: #1d89bb;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(left, #1d89bb 0%, #1ea1de 50%, #1d89bb 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #1d89bb), color-stop(50%, #1ea1de), color-stop(100%, #1d89bb));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(left, #1d89bb 0%, #1ea1de 50%, #1d89bb 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(left, #1d89bb 0%, #1ea1de 50%, #1d89bb 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(left, #1d89bb 0%, #1ea1de 50%, #1d89bb 100%);
-  /* IE10+ */
-
-  background: linear-gradient(to right, #1d89bb 0%, #1ea1de 50%, #1d89bb 100%);
-  /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d89bb', endColorstr='#1d89bb', GradientType=1);
-  /* IE6-9 */
-
 }
 .video a.video-btn > img {
   width: 100%;
@@ -202,28 +180,26 @@ header #main-menu li:not(:last-child) > a {
   display: table;
   width: 100%;
   margin: 10px 0 30px;
-  box-sizing: border-box;
 }
-.logobox span {
+#logobox-text {
   width: 140px;
-  border-right: solid 1px #ccc;
+  /*border-right: solid 1px #ccc;*/
+
   padding: 10px;
 }
-.logobox span,
+.logobox #logobox-text,
 .logobox img {
   vertical-align: middle;
 }
-@media (max-width: 768px) {
-  .logobox span:nth-child(odd),
-  .logobox img:nth-child(odd) {
-    float: left;
-    clear: both;
-  }
-  .logobox span:nth-child(even),
-  .logobox img:nth-child(even) {
-    float: right;
-  }
-}
+/*@media(max-width: 768px) {
+	.logobox span:nth-child(odd), .logobox img:nth-child(odd) {
+		float:left;
+		clear:both;
+	}
+	.logobox span:nth-child(even), .logobox img:nth-child(even) {
+		float:right;
+	}
+}*/
 @media (max-width: 768px) {
   header #main-menu {
     width: 100%;

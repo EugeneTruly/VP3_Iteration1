@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="top-bar-links">
-                            <a href="https://members.viewpath.com/User/Login.aspx">Login</a> | <a href="https://members.viewpath.com/SignupIQ/Signup.aspx">Signup</a>
+                            <a href="https://members.viewpath.com/User/Login.aspx">Login</a> | <a href="https://members.viewpath.com/SignupIQ/Signup.aspx">Signup</a>&nbsp;
                         </div>
                     </div>
                 </div>
@@ -30,22 +30,26 @@
 
         <div class="navbar navbar-default" role="navigation" id="top-menu">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink(" ", "Index", "Home", null, new { @class = "logo", @id = "logo" })
-                </div>
-                <div class="collapse navbar-collapse navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right" id="main-menu1">
-                        <li>@Html.ActionLink("Home", "Index", "")</li>
-                        <li>@Html.ActionLink("Product", "Product", "Home")</li>
-                        <li>@Html.ActionLink("Community", "Community", "Home")</li>
-                        <li>@Html.ActionLink("Support", "Support", "Home")</li>
-                        <li>@Html.ActionLink("Company", "Company", "Home")</li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            @Html.ActionLink(" ", "Index", "Home", null, new { @class = "logo", @id = "logo" })
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav pull-right" id="main-menu">
+                                <li>@Html.ActionLink("Home", "Index", "")</li>
+                                <li>@Html.ActionLink("Product", "Product", "Home")</li>
+                                <li>@Html.ActionLink("Community", "Community", "Home")</li>
+                                <li>@Html.ActionLink("Support", "Support", "Home")</li>
+                                <li>@Html.ActionLink("Company", "Company", "Home")</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div><!-- End #top-menu -->
@@ -62,5 +66,14 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    
+    <script type="text/javascript">
+        $(function () {
+            return $(".navbar-toggle").click(function () {
+                return $("#main-menu").toggle();
+            });
+        });
+    </script>
+
 </body>
 </html>
