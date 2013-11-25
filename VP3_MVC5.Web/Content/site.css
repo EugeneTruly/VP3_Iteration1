@@ -135,6 +135,14 @@ header #main-menu li:not(:last-child) > a {
   padding: 3px;
   color: #1ea1de;
 }
+#video1-footer {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+  color: #fff;
+  margin-top: 150px;
+}
 @media (min-width: 780px) {
   .pull-right-md {
     float: right;
@@ -151,6 +159,14 @@ header #main-menu li:not(:last-child) > a {
   text-align: center;
   padding: 3px;
   color: #010101;
+}
+#video2-footer {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+  color: #fff;
+  margin-top: 150px;
 }
 #video-text {
   font-size: 14px;

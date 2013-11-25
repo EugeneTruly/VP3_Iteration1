@@ -201,6 +201,7 @@
     <None Include="Properties\PublishProfiles\viewpathmvc5 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\viewpathmvc5 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -231,6 +232,29 @@
     <Content Include="Scripts\vp_home_anim.hyperesources\topshadow.png" />
     <Content Include="Scripts\vp_home_anim.hyperesources\vphomeanim_hype_generated_script.js" />
     <Content Include="Scripts\vp_home_anim.hyperesources\window.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\01_crowd.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\01_crowd_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\01_girl.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\01_girl_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\01_guy.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\01_guy_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\02_girl.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\02_girl_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\03_woman.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\03_woman_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\04_guy.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\04_guy_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\05_lady.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\05_lady_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\06_dude.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\06_dude_glow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\city.jpg" />
+    <Content Include="Content\vp_home_anim.hyperesources\clouds.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\HYPE.js" />
+    <Content Include="Content\vp_home_anim.hyperesources\PIE.htc" />
+    <Content Include="Content\vp_home_anim.hyperesources\topshadow.png" />
+    <Content Include="Content\vp_home_anim.hyperesources\vphomeanim_hype_generated_script.js" />
+    <Content Include="Content\vp_home_anim.hyperesources\window.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
