@@ -1,77 +1,124 @@
 ﻿@{
     ViewBag.Title = "Online Project Management";
 }
+
+<style>
+    
+#container {
+    /*width:86%;*/
+	max-width:940px;
+	margin:0 auto;
+	padding:0;
+	background: inherit;
+}
+
+#scalecontainer {
+    -moz-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+    width: 940px;
+    margin: 0 auto;
+    padding:0;
+}
+
+#containingElement {
+    width:100%;
+    height: 350px; /* The recommend size for this is equal to or larger than the H of the element. */
+    background-color: inherit;
+    padding:0;
+}
+
+html {overflow: hidden; overflow-y: auto;}
+
+/* Media queries to resize animation container div */
+
+@@media screen and (max-width: 320px) { #containingElement { height:141px; } }
+@@media screen and (min-width: 321px) and (max-width: 380px) {#containingElement {height:167px;}}
+@@media screen and (min-width: 381px) and (max-width: 420px) {#containingElement {height:185px;}}
+@@media screen and (min-width: 421px) and (max-width: 480px) {#containingElement {height:212px;}}
+@@media screen and (min-width: 481px) and (max-width: 540px) {#containingElement {height:238px;}}
+@@media screen and (min-width: 541px) and (max-width: 599px) {#containingElement {height:264px;}}
+@@media screen and (min-width: 600px) and (max-width: 640px) {#containingElement {height:282px;}}
+@@media screen and (min-width: 600px) and (max-width: 700px) {#containingElement {height:309px;}}
+@@media screen and (min-width: 701px) and (max-width: 767px) {#containingElement {height:270px;}}
+
+@@media screen and (min-width: 700px) and (max-width: 768px) { #containingElement { height:276px; } }
+@@media screen and (min-width: 768px) and (max-width: 992px) { #containingElement { height:276px; } }
+@@media screen and (min-width: 992px) and (max-width: 1200px) { #containingElement { height:350px; } }
+
+</style>
+
 <div class="row">
-    <div class="span12">
-        <div id="hero">
+    <div id="container">
+        <div id="containingElement">
+            <div id="scalecontainer">
+
+                <!-- hype container -->
+
+                <div id="vphomeanim_hype_container" style="position: relative; overflow: hidden; width: 940px; height: 350px;">
+                    <script type="text/javascript" charset="utf-8" src="~/Content/vp_home_anim.hyperesources/vphomeanim_hype_generated_script.js"></script>
+                </div>
+                <!-- hype container -->
+
+            </div>
+            <!-- scalecontainer -->
         </div>
-        <div id="call-to-action">
-            <div id="call-to-action-header">
-                FREE STARTER EDITION
-            </div>
-            <div id="call-to-action-button">
-                <a class="btn-signup btn btn-success" href="https://members.viewpath.com/SignupIQ/Signup.aspx">Signup Now!</a> No credit card required
-            </div>
-            <div id="call-to-action-text">
-                Manage as many projects as you want, and add as many guests as you need. There's
-                        no software to download or install!
-            </div>
-            <div class="clear">
-            </div>
-        </div>
-        <div class="call-to-action-shadow">
-            <img alt="Shadow for call-to-action box" src="Content/images/call2action_shadow.png" />
-        </div>
-        <h2 id="subheader">Viewpath is leading the way in online project management solutions.</h2>
+        <!-- containingElement -->
     </div>
+
 </div>
-<div class="row product-videos">
-    <div id="video1" class="span3 video">
-        <div class="video-header">
-            Task Scheduling
+
+
+<div class="row">
+    <div id="call-to-action">
+        <div id="call-to-action-header">
+            FREE STARTER EDITION
         </div>
-        <a class="video-btn" href="#watchvideo1">
-            <img alt="" src="Content/images/home_video_1_thumbnail.png" /><br />
-        </a>
-        <div class="video-footer">
-            Play Video
+        <div id="call-to-action-button">
+            <a class="btn-signup btn btn-success" href="https://members.viewpath.com/SignupIQ/Signup.aspx">SIGNUP NOW!</a> No credit card required
         </div>
+        <div id="call-to-action-text">Manage as many projects as you want, and add as many guests as you need. There's no software to download or install!</div>
     </div>
-    <div id="video-text" class="span6">
+    <div class="call-to-action-shadow">
+        <img class="img-responsive" alt="Shadow for call-to-action box" src="~/Content/images/call2action_shadow.png" />
+    </div>
+    <h2 id="subheader">Viewpath is leading the way in online project management solutions.</h2>
+</div>
+
+<div class="row" id="product-videos">
+
+    <div class="col-md-4 col-md-push-4 col-xs-12" id="video-text">
         <p id="video-text-header">
-            Viewpath is your answer to managing all of your projects, teams, and tasks.
+            See how Viewpath dramatically simplifies project workflow and team collaboration – all with drag-and-drop simplicity. 
         </p>
         <p>
-            With limited resources and competing priorities, you need up-to-date information
-                    on project status, task assignments, and resource availability. Viewpath delivers
-                    a project management solution that your entire team can use to track their workload
-                    and update the status of their assignments. Viewpath replaces ad-hoc spreadsheets,
-                    excessive team meetings, and legacy desktop project management software, providing
-                    a cloud-based solution that brings your team together to help your project succeed.
+            Viewpath is the only project management solution which provides interactive Gantt charts, Resource Allocation graphs, and Agile tools – in one complete picture.
         </p>
     </div>
-    <div id="video2" class="span3">
-        <div class="video-header">
-            Resource Management
-        </div>
-        <a class="video-btn" href="#watchvideo2">
-            <img alt="" src="Content/images/home_video_2_thumbnail.png" /><br />
-        </a>
-        <div class="video-footer">
-            Play Video
-        </div>
+
+    <div class="col-md-4 col-xs-6 col-md-pull-4" id="video1">
+        <div id="video1-header">Flexible Features</div>
+        <div id="video1-footer">Watch Video ></div>
     </div>
+
+    <div class="col-md-4 col-xs-6 pull-right-md" id="video2">
+        <div id="video2-header">Collabaration Options</div>
+        <div id="video2-footer">Watch Video ></div>
+    </div>
+
 </div>
-<div class="row">
-    <div class="span12">
-        <div class="logobox">
-            <span>Thousands of businesses choose Viewpath</span>
-            <img src="Content/images/logo_abbott.png" alt="Logo Abbott" />
-            <img src="Content/images/logo_broad_institute.png" alt="Logo Broad Institute" />
-            @*                   <img src="Content/images/logo_harvard.png" alt="Logo Harvard" />   This needs to be replaced by the IHS logo found on Staging *@
-            <img src="Content/images/logo_hr.png" alt="Logo HR" />
-            <img src="Content/images/logo_noaa.png" alt="Logo NOAA" />
-            <img src="Content/images/logo_salesforce.png" alt="Logo Salesforce" />
-        </div>
+
+<div class="row" style="margin-top: 20px;">
+    <div class="logobox">
+        <div class="pull-left" id="logobox-text">Thousands of businesses choose Viewpath</div>
+        <img src="~/Content/images/logo_abbott.png" alt="Logo Abbott" />
+        <img src="~/Content/images/logo_broad_institute.png" alt="Logo Broad Institute" />
+        <img src="~/Content/images/logo_harvard.png" alt="Logo Harvard" />
+        <img src="~/Content/images/logo_hr.png" alt="Logo HR" />
+        <img src="~/Content/images/logo_noaa.png" alt="Logo NOAA" />
+        <img src="~/Content/images/logo_sabre.png" alt="Logo Sabre" />
+        <img src="~/Content/images/logo_salesforce.png" alt="Logo Salesforce" />
     </div>
 </div>

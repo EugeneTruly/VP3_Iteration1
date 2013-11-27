@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Viewpath</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"
+        type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div id="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div id="top-bar-links">
+                            <a href="https://members.viewpath.com/User/Login.aspx">Login</a> | <a href="https://members.viewpath.com/SignupIQ/Signup.aspx">Signup</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <a href="#" class='btn btn-mobile-menu'><i class="icon-white icon-reorder"></i></a>
+                    @Html.ActionLink(" ", "Index", "Home", new { @class = "logo", @id = "logo" })
+                    <nav class="">
+                        <ul id="main-menu" class="inline">
+                            <li>@Html.ActionLink("Home", "Index", "")</li>
+                            <li>@Html.ActionLink("Product", "Product", "Home")</li>
+                            <li>@Html.ActionLink("Community", "Community", "Home")</li>
+                            <li>@Html.ActionLink("Support", "Support", "Home")</li>
+                            <li>@Html.ActionLink("Company", "Company", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="body" class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="footer-links">
+                        @Html.ActionLink("Home", "Index")
+                        @Html.ActionLink("Product", "Product")
+                        @Html.ActionLink("Community", "Community")
+                        @Html.ActionLink("Support", "Support")
+                        @Html.ActionLink("Company", "Company")
+                    </div>
+                    <div id="copyright">
+                        &copy; 2006 - 2013 by Viewpath | @Html.ActionLink("Privacy Statement", "Privacy")
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/application")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
