@@ -6,12 +6,10 @@ body .navbar-default {
   border: none;
   background: inherit;
 }
-header .navbar-collapse {
-  padding: 0;
-  margin: 0;
-}
-header .navbar {
-  margin: 0;
+header {
+  /*.navbar-collapse { padding: 0; margin: 0; }
+    .navbar { margin: 0; }*/
+
 }
 header #top-bar {
   background: url('images/topper_bkgd.png');
@@ -60,6 +58,10 @@ header #main-menu li > a {
 }
 header #main-menu li:not(:last-child) > a {
   border-right: 1px solid gray;
+}
+.HYPE_element {
+  width: 940px;
+  height: 350px;
 }
 #hero {
   position: relative;
@@ -207,15 +209,6 @@ header #main-menu li:not(:last-child) > a {
 .logobox img {
   vertical-align: middle;
 }
-/*@media(max-width: 768px) {
-	.logobox span:nth-child(odd), .logobox img:nth-child(odd) {
-		float:left;
-		clear:both;
-	}
-	.logobox span:nth-child(even), .logobox img:nth-child(even) {
-		float:right;
-	}
-}*/
 @media (max-width: 768px) {
   header #main-menu {
     width: 100%;

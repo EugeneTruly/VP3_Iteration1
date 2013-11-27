@@ -28,33 +28,32 @@
             </div>
         </div><!-- End #top-bar -->
 
+        
         <div class="navbar navbar-default" role="navigation" id="top-menu">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            @Html.ActionLink(" ", "Index", "Home", null, new { @class = "logo", @id = "logo" })
-                        </div>
-                        <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav pull-right" id="main-menu">
-                                <li>@Html.ActionLink("Home", "Index", "")</li>
-                                <li>@Html.ActionLink("Product", "Product", "Home")</li>
-                                <li>@Html.ActionLink("Community", "Community", "Home")</li>
-                                <li>@Html.ActionLink("Support", "Support", "Home")</li>
-                                <li>@Html.ActionLink("Company", "Company", "Home")</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink(" ", "Index", "Home", null, new { @class = "logo", @id = "logo" })
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav pull-right" id="main-menu">
+                        <li>@Html.ActionLink("Home", "Index", "")</li>
+                        <li>@Html.ActionLink("Product", "Product", "Home")</li>
+                        <li>@Html.ActionLink("Community", "Community", "Home")</li>
+                        <li>@Html.ActionLink("Support", "Support", "Home")</li>
+                        <li>@Html.ActionLink("Company", "Company", "Home")</li>
+                    </ul>
                 </div>
             </div>
-        </div><!-- End #top-menu -->
+        </div>
+        <!-- End #top-menu -->
 
     </header>
+
     <div class="container body-content">
         @RenderBody()
         <footer>
@@ -71,13 +70,77 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-
+    
     <script type="text/javascript">
+
+        var alsoenlarge = true;
+
         $(function () {
-            return $(".navbar-toggle").click(function () {
-                return $("#main-menu").toggle();
+            $(".navbar-toggle").click(function () {
+                $("#main-menu").toggle();
             });
+            
+            // HTML5 animation object resize logic
+            if (isScalePossible()) {
+                //$('body').css({ overflow: 'visible' });  // Changed from hidden to visible
+                //$('#scalecontainer').css({ position: 'absolute', margin: 0 });
+
+                // Run scale function on start
+                scaleSite();
+
+                // Run scale function on browser resize
+                $(window).resize(scaleSite);
+            }
         });
+        
+        // Show menu after resize bug workaround
+        function showMenu() {
+            if (window.innerWidth > 768) {
+                $("#main-menu").show();
+            }
+        }
+        window.onload = window.onresize = showMenu;
+        
+        // Determine if browser supports scale
+        function isScalePossible() {
+            can = 'MozTransform' in document.body.style;
+            if (!can) can = 'webkitTransform' in document.body.style;
+            if (!can) can = 'msTransform' in document.body.style;
+            if (!can) can = 'OTransform' in document.body.style;
+            if (!can) can = 'transform' in document.body.style;
+            if (!can) can = 'Transform' in document.body.style;
+            return can;
+        }
+        // Scale animation by applying css transormations
+        function scaleSite() {
+            
+            var containerw = $("#containingElement").width();
+            var containerh = $("#containingElement").height();
+            var sitew = $('#scalecontainer').width();
+            var siteh = $('#scalecontainer').height();
+
+            var f = containerw / sitew;
+            f = containerh / siteh < f ? containerh / siteh : f;
+            if (!alsoenlarge && f > 1) f = 1;
+
+            // workaround
+            if (window.innerWidth < 768) {
+                console.log("f: " + f + " window.innerWidth: " + window.innerWidth);
+                f = f * 1.01;
+            }
+
+            $('#scalecontainer').css({
+                "-moz-transform": "scale(" + f + ")",
+                "-webkit-transform": "scale(" + f + ")",
+                "-ms-transform": "scale(" + f + ")",
+                "-o-transform": "scale(" + f + ")",
+                "transform": "scale(" + f + ")",
+                "center": ((containerw - (sitew * f)) / 2) + "px",
+                "top": "0" // can be adjusted for heading
+            });
+        }
+
+        
     </script>
 
 </body>
